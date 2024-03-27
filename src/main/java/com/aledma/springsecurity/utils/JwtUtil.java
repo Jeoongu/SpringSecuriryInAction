@@ -36,7 +36,7 @@ public class JwtUtil {
      * @param member
      * @return Access Token String
      */
-    private String createAccessToken(CustomUserInfoDto member){
+    public String createAccessToken(CustomUserInfoDto member){
         return createToken(member, accessTokenExpTime);
     }
 
@@ -44,7 +44,7 @@ public class JwtUtil {
     * JWT 생성 메서드
     * return JWT String
      */
-    private String createToken(CustomUserInfoDto member, long expireTime){
+    public String createToken(CustomUserInfoDto member, long expireTime){
         Claims claims = Jwts.claims();
         claims.put("memberId", member.getMemberId());
         claims.put("email", member.getEmail());

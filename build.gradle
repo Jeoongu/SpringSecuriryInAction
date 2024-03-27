@@ -38,6 +38,7 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-security'
 	implementation 'org.thymeleaf.extras:thymeleaf-extras-springsecurity6' // Thymeleaf Spring Security 추가
 
+	// jwt 토큰 사용시 3개다 반드시 import 할 것
 	implementation 'io.jsonwebtoken:jjwt-api:0.11.5'
 	implementation 'io.jsonwebtoken:jjwt-impl:0.11.5'
 	implementation 'io.jsonwebtoken:jjwt-jackson:0.11.5'
@@ -50,6 +51,11 @@ dependencies {
 	implementation 'javax.xml.bind:jaxb-api:2.3.1'
 	implementation 'com.sun.xml.bind:jaxb-impl:2.3.1'
 	implementation 'com.sun.xml.bind:jaxb-core:2.3.0.1'
+
+	// Model Mapper : 객체 간의 매핑을 자동으로 처리하는 간편한 방법을 제공
+//	implementation group: 'org.modelmapper', name: 'modelmapper', version: '2.4.2'
+	implementation 'org.modelmapper:modelmapper:2.4.2' // 현재 버전에 맞게 변경
+
 
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testImplementation 'org.springframework.security:spring-security-test'
